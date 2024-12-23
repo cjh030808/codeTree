@@ -6,7 +6,10 @@
 int partSequence(int *A, int *B, int An, int Bn){
     int n = -1;
     for(int i = 0; i < An; i++){
-        if(A[i] == B[0]) n = i;
+        if(A[i] == B[0]) {
+            n = i;
+            break;
+        }
     }
     if(n == -1) return 0;
     for(int j = 0; j < Bn; j++){
