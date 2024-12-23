@@ -21,6 +21,9 @@ int monthDayCalculator(int M, int D){
         case 2:  // 2월
             monthDay = 28;
             break;
+        default :
+            monthDay = -1;
+            break;
     }
     if(monthDay < D) return 0;
     return 1;
@@ -30,7 +33,7 @@ int main() {
     int M, D;
     scanf("%d %d", &M, &D);
 
-    if(monthDayCalculator) printf("Yes");
+    if(monthDayCalculator(M, D)) printf("Yes");
     else printf("No");
     return 0;
 }
