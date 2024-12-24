@@ -22,7 +22,7 @@ int dayValidCheck(int year, int month, int day){
 }
 
 int seasonCheck(int month){
-    if(3 <= month  && month <= 5) return 1;
+    if(3 <= month && month <= 5) return 1;
     else if(6 <= month && month <= 8) return 2;
     else if(9 <= month && month <= 11) return 3;
     else return 4;
@@ -34,7 +34,10 @@ int main() {
     scanf("%d %d %d", &Y, &M, &D);
     if(dayValidCheck(Y, M, D)){
         season = seasonCheck(M);
-    } else printf("-1");
+    } else {
+        printf("-1");
+        return 0;
+    }
 
     switch(season) {
         case 1 :
@@ -51,7 +54,7 @@ int main() {
             break;
         default:
             printf("-1");
-            break;
+            return 0;
     }
     return 0;
 }
