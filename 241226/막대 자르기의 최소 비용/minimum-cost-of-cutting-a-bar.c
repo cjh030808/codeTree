@@ -27,7 +27,7 @@ void stickSorting(int *arr, int left, int right){
 int main() {
     int n;
     int length = 0;
-    int result = 0;
+    long long result = 0;
     scanf("%d", &n);
 
     int *stick = (int *)malloc(sizeof(int) * n);
@@ -43,7 +43,7 @@ int main() {
     }
     
 
-    printf("%d", result);
+    printf("%ld", result);
 
     free(stick);
     return 0;
