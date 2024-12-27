@@ -6,7 +6,7 @@ void plusTenMultTwo(int *a, int *b){
         *b *= 2;
     } else {
         *a *= 2;
-        b += 10;
+        *b += 10;
     }
 }
 
