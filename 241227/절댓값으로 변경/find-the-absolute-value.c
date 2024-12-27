@@ -3,7 +3,7 @@
 
 void absoluteNum(int *arr, int N){
     for(int i = 0; i < N; i++){
-        arr[i] = (arr[i] < 0) ? -arr[i] : arr[i];
+        if(arr[i] < 0) arr[i] *= -1;
     }
 }
 
