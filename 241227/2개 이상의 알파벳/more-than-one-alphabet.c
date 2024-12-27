@@ -2,10 +2,12 @@
 #include <string.h>
 
 int alphabet2(char *arr, int len){
-    for(int i = 0; i < len - 1; i++) {
-        if(i >= 1 && arr[i] != arr[i+1]) return 1;
+    int result = 0;
+    for(int i = 0; i < len; i++) {
+        if(arr[i] != arr[i+1]) result ++;
+        if(result >= 1) return result;
     }
-    return 0;
+    return result;
 }
 
 int main() {
