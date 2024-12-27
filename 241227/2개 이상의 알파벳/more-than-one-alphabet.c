@@ -3,6 +3,7 @@
 
 int alphabet2(char *arr, int len){
     for(int i = 0; i < len - 1; i++) {
+        if(i >= 1) return 1;
         if(arr[i] == arr[i+1]) return 0;
     }
     return 1;
