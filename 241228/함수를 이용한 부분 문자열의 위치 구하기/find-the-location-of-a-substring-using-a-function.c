@@ -5,17 +5,23 @@ int arrayIndex(char *arr, char *target) {
     int len = strlen(arr);
     int trglen = strlen(target);
 
-    for(int i = 0; i < len; i++){
-        if(target[0] == arr[i]) {
-            int tmp = i;
-            for(int j = 0; j < trglen; j++) {
-                if(target[j] == arr[tmp]){
-                    tmp++;
-                }
+    // 입력 문자열을 순차적으로 탐색
+    for (int i = 0; i <= len - trglen; i++) {
+        int found = 1;
+        // 목적 문자열의 모든 문자가 일치하는지 확인
+        for (int j = 0; j < trglen; j++) {
+            if (arr[i + j] != target[j]) {
+                found = 0;
+                break;
             }
-            if(tmp - i == trglen) return i;
+        }
+        // 모두 일치하면 해당 인덱스를 반환
+        if (found) {
+            return i;
         }
     }
+
+    // 일치하는 부분 문자열이 없으면 -1 반환
     return -1;
 }
 
