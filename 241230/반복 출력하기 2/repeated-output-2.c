@@ -10,6 +10,6 @@ void recursiveFunc(int n){
 int main() {
     int n ;
     scanf("%d", &n);
-    recursiveFunc(4);
+    recursiveFunc(n);
     return 0;
 }
